@@ -212,6 +212,10 @@ def update_config(config, args):
         config.MODEL.RESUME = args.resume
     if args.last_epoch:
         config.TRAIN.LAST_EPOCH = args.last_epoch
+    if args.num_classes:
+        config.MODEL.NUM_CLASSES = args.num_classes
+    if args.num_epochs:
+        config.TRAIN.NUM_EPOCHS = args.num_epochs
     if args.amp:  # only for training
         config.AMP = not config.EVAL
     # config.freeze()

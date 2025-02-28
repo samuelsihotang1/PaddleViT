@@ -53,6 +53,8 @@ def get_arguments():
     parser.add_argument('-last_epoch', type=int, default=None)
     parser.add_argument('-eval', action='store_true')
     parser.add_argument('-amp', action='store_true')
+    parser.add_argument('-num_classes', type=int, default=None)
+    parser.add_argument('-num_epochs', type=int, default=None)
     arguments = parser.parse_args()
     return arguments
 
